@@ -1,0 +1,261 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Variable Conversion</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Variable Conversion</h2>
+      <div>
+        <div class="card border-primary">
+          <div class="card-header">variable</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" id="variable-input" />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="paste-btn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M104.6 48L64 48C28.7 48 0 76.7 0 112L0 384c0 35.3 28.7 64 64 64l96 0 0-48-96 0c-8.8 0-16-7.2-16-16l0-272c0-8.8 7.2-16 16-16l16 0c0 17.7 14.3 32 32 32l72.4 0C202 108.4 227.6 96 256 96l62 0c-7.1-27.6-32.2-48-62-48l-40.6 0C211.6 20.9 188.2 0 160 0s-51.6 20.9-55.4 48zM144 56a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zM448 464l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L464 243.9 464 448c0 8.8-7.2 16-16 16zM256 512l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9l-67.9-67.9c-9-9-21.2-14.1-33.9-14.1L256 128c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64z"
+                  ></path></svg
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-group mt-4">
+          <div class="card border-success">
+            <div class="card-header">camelCase</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="camel-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#camel-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card border-success">
+            <div class="card-header">kebab-case</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="kebab-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#kebab-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group mt-4">
+          <div class="card border-success">
+            <div class="card-header">snake_case</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="snake-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#snake-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card border-success">
+            <div class="card-header">Start Case</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="start-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#start-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group mt-4">
+          <div class="card border-success">
+            <div class="card-header">UPPER CASE</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="upper-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#upper-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card border-success">
+            <div class="card-header">lower case</div>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" id="lower-case-input" />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  data-clipboard-target="#lower-case-input"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
+                    ></path></svg
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+      integrity="sha256-qXBd/EfAdjOA2FGrGAG+b3YBn2tn5A6bhz+LSgYD96k="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"
+      integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck="
+      crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const variableInput = document.querySelector("#variable-input");
+        const pasteButton = document.querySelector("#paste-btn");
+        const camelCaseInput = document.querySelector("#camel-case-input");
+        const kebabCaseInput = document.querySelector("#kebab-case-input");
+        const snakeCaseInput = document.querySelector("#snake-case-input");
+        const startCaseInput = document.querySelector("#start-case-input");
+        const upperCaseInput = document.querySelector("#upper-case-input");
+        const lowerCaseInput = document.querySelector("#lower-case-input");
+
+        variableInput.addEventListener("input", (event) => {
+          const val = event.target.value;
+          camelCaseInput.value = _.camelCase(val);
+          kebabCaseInput.value = _.kebabCase(val);
+          snakeCaseInput.value = _.snakeCase(val);
+          startCaseInput.value = _.startCase(val);
+          upperCaseInput.value = _.upperCase(val);
+          lowerCaseInput.value = _.lowerCase(val);
+        });
+
+        const clipboard = new ClipboardJS(".btn");
+
+        pasteButton.addEventListener("click", () => {
+          if (!navigator.clipboard || !navigator.clipboard.readText) {
+            return;
+          }
+
+          navigator.clipboard
+            .readText()
+            .then((clipboardText) => {
+              variableInput.value = clipboardText;
+
+              camelCaseInput.value = _.camelCase(clipboardText);
+              kebabCaseInput.value = _.kebabCase(clipboardText);
+              snakeCaseInput.value = _.snakeCase(clipboardText);
+              startCaseInput.value = _.startCase(clipboardText);
+              upperCaseInput.value = _.upperCase(clipboardText);
+              lowerCaseInput.value = _.lowerCase(clipboardText);
+            })
+            .catch((err) => {
+              console.error("无法从剪贴板读取文本: ", err);
+              alert(
+                "粘贴失败！请检查浏览器权限，并确保页面是通过 HTTPS 访问的。"
+              );
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
